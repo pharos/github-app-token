@@ -22,7 +22,7 @@ export const fetchInstallationToken = async ({
     request: request.defaults({
       // GITHUB_API_URL is part of GitHub Actions' built-in environment variables.
       // See https://docs.github.com/en/actions/reference/environment-variables#default-environment-variables.
-      baseUrl: env.GITHUB_API_URL,
+      baseUrl: env.GH_API_URL || env.GITHUB_API_URL,
     }),
   });
 
